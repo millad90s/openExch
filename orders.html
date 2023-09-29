@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Orders</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Order list styles */
+        .order-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Sell and Buy order styles */
+        .order {
+            width: 48%; /* Adjust the width as needed */
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Order table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* ... (rest of the styles) ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Orders</h1>
+
+        <div class="order-list">
+            <!-- Sell Orders -->
+            <div class="order">
+                <h2>Sell Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Order Date</th>
+                            <th>Source Currency</th>
+                            <th>Destination Currency</th>
+                            <th>Unit Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- List sell orders here -->
+                        <tr>
+                            <td>1</td>
+                            <td>2023-09-30</td>
+                            <td>USD</td>
+                            <td>EUR</td>
+                            <td>1.18</td>
+                        </tr>
+                        <!-- Add more sell orders as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Buy Orders -->
+            <div class="order">
+                <h2>Buy Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Order Date</th>
+                            <th>Source Currency</th>
+                            <th>Destination Currency</th>
+                            <th>Unit Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- List buy orders here -->
+                        <tr>
+                            <td>1</td>
+                            <td>2023-09-30</td>
+                            <td>EUR</td>
+                            <td>USD</td>
+                            <td>1.15</td>
+                        </tr>
+                        <!-- Add more buy orders as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

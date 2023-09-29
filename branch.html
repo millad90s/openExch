@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Branch Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Branch Management</h1>
+
+        <!-- Branch Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch Name</th>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Current Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Branch 1</td>
+                    <td>New York</td>
+                    <td>Open</td>
+                    <td id="branch-1-time" class="current-time"></td>
+                </tr>
+                <tr>
+                    <td>Branch 2</td>
+                    <td>Los Angeles</td>
+                    <td>Closed</td>
+                    <td id="branch-2-time" class="current-time"></td>
+                </tr>
+                <!-- Add more branches dynamically or manually -->
+            </tbody>
+        </table>
+
+        <!-- Add New Branch Form -->
+        <div class="branch-form">
+            <h2>Add New Branch</h2>
+            <form method="post">
+<!-- Add New Branch Form -->
+<div class="branch-form">
+    <h2>Add New Branch</h2>
+    <form method="post">
+        <label for="branch-name">Branch Name:</label>
+        <input type="text" id="branch-name" name="branch-name" required><br><br>
+
+        <label for="branch-location">Location:</label>
+        <input type="text" id="branch-location" name="branch-location" required><br><br>
+
+        <label for="branch-status">Status:</label>
+        <select id="branch-status" name="branch-status">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+        </select><br><br>
+
+        <!-- Working Hours Table with Holidays -->
+        <table class="working-hours-table">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Working Hours</th>
+                    <th>Holiday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Monday -->
+                <tr>
+                    <td>Monday</td>
+                    <td><input type="text" id="monday" name="monday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="monday-holiday" name="monday-holiday"></td>
+                </tr>
+                <!-- Tuesday -->
+                <tr>
+                    <td>Tuesday</td>
+                    <td><input type="text" id="tuesday" name="tuesday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="tuesday-holiday" name="tuesday-holiday"></td>
+                </tr>
+                <!-- Wednesday -->
+                <tr>
+                    <td>Wednesday</td>
+                    <td><input type="text" id="wednesday" name="wednesday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="wednesday-holiday" name="wednesday-holiday"></td>
+                </tr>
+                <!-- Thursday -->
+                <tr>
+                    <td>Thursday</td>
+                    <td><input type="text" id="thursday" name="thursday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="thursday-holiday" name="thursday-holiday"></td>
+                </tr>
+                <!-- Friday -->
+                <tr>
+                    <td>Friday</td>
+                    <td><input type="text" id="friday" name="friday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="friday-holiday" name="friday-holiday"></td>
+                </tr>
+                <!-- Saturday -->
+                <tr>
+                    <td>Saturday</td>
+                    <td><input type="text" id="saturday" name="saturday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="saturday-holiday" name="saturday-holiday"></td>
+                </tr>
+                <!-- Sunday -->
+                <tr>
+                    <td>Sunday</td>
+                    <td><input type="text" id="sunday" name="sunday" placeholder="e.g., 9:00 AM - 5:00 PM" required style="width: 100%;"></td>
+                    <td><input type="checkbox" id="sunday-holiday" name="sunday-holiday"></td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <input type="submit" class="btn" value="Add Branch">
+    </form>
+</div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript to update current time -->
+    <script src="script.js"></script>
+</body>
+</html>

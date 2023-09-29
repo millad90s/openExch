@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* User invitation form styles */
+        .user-invite-form {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Status label styles */
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            background-color: #FFC107;
+            color: #333;
+        }
+
+        .status-active {
+            background-color: #28A745;
+            color: #fff;
+        }
+
+        .status-inactive {
+            background-color: #DC3545;
+            color: #fff;
+        }
+
+        /* LimitL label styles */
+        .limitL {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .limitL-yes {
+            background-color: #28A745;
+            color: #fff;
+        }
+
+        .limitL-no {
+            background-color: #DC3545;
+            color: #fff;
+        }
+
+        /* Group label styles */
+        .group {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .group-admin {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .group-user {
+            background-color: #17A2B8;
+            color: #fff;
+        }
+
+        /* Checkbox styles */
+        .checkbox {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        /* Add some margin for the checkbox label */
+        .checkbox-label {
+            margin-left: 5px;
+        }
+
+        /* Action buttons container */
+        .action-buttons {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="btn" id="delete-users">Delete Selected Users</button>
+            <button class="btn" id="activate-users">Activate Selected Users</button>
+            <button class="btn" id="deactivate-users">Deactivate Selected Users</button>
+            <button class="btn" id="limit-login">Limit Login for Selected Users</button>
+        </div>
+
+        <!-- User Table -->
+<!-- User Table -->
+<table>
+    <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="header-checkbox">
+            </th>
+            <th>User Name</th>
+            <th>Email Address</th>
+            <th>Status</th>
+            <th>LimitL</th>
+            <th>Group</th>
+            <th>Branches</th>
+            <th>Authenticator App</th> <!-- New column for authenticator app option -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input type="checkbox" class="checkbox"></td>
+            <td>User 1</td>
+            <td>user1@example.com</td>
+            <td><span class="status status-active">Active</span></td>
+            <td><span class="limitL limitL-yes">Yes</span></td>
+            <td><span class="group group-admin">Admin</span></td>
+            <td>
+                <span class="branch-label branch-label-blue">Branch A</span>
+                <span class="branch-label branch-label-green">Branch B</span>
+            </td>
+            <td>
+                <label>
+                    <input type="checkbox" class="authenticator-checkbox"> Require
+                </label>
+            </td> <!-- Display authenticator app option -->
+        </tr>
+        <tr>
+            <!-- Add more user rows dynamically or manually with authenticator app data -->
+        </tr>
+    </tbody>
+</table>
+<!-- ... (rest of the code) ... -->
+
+
+
+
+<!-- User Invitation Form -->
+<div class="user-invite-form">
+    <h2>Invite User</h2>
+    <form method="post">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="limitL">LimitL:</label>
+        <select id="limitL" name="limitL">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label for="group">Group:</label>
+        <select id="group" name="group">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select><br><br>
+
+        <!-- Checkbox for authenticator app -->
+        <label>
+            <input type="checkbox" id="authenticator-invite-checkbox"> Require Authenticator App
+        </label><br><br>
+
+        <input type="submit" class="btn" value="Send Invitation">
+    </form>
+</div>
+
+
+
+
+        <script>
+            // JavaScript to handle actions on selected users (you can implement this functionality)
+            document.getElementById("delete-users").addEventListener("click", function() {
+                // Implement delete logic for selected users
+            });
+
+            document.getElementById("activate-users").addEventListener("click", function() {
+                // Implement activate logic for selected users
+            });
+
+            document.getElementById("deactivate-users").addEventListener("click", function() {
+                // Implement deactivate logic for selected users
+            });
+
+            document.getElementById("limit-login").addEventListener("click", function() {
+                // Implement limit login logic for selected users
+            });
+
+            // JavaScript to handle header checkbox
+            document.getElementById("header-checkbox").addEventListener("change", function() {
+                const checkboxes = document.querySelectorAll(".checkbox");
+                checkboxes.forEach((checkbox) => {
+                    checkbox.checked = this.checked;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>

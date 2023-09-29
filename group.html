@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Management</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Group form styles */
+        .group-form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Permission checkbox styles */
+        .permission-checkbox {
+            margin-right: 10px;
+        }
+
+        /* Permissions table styles */
+        .permissions-table {
+            width: 100%;
+        }
+
+        .permissions-table th,
+        .permissions-table td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        .permissions-table td label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Group Management</h1>
+
+        <!-- Group Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Group Name</th>
+                    <th>Add Permission</th>
+                    <th>Update Permission</th>
+                    <th>Delete Permission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Admin</td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="add-user" checked> Add User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="add-group"> Add Group</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="add-group"> Add Branch</label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="update-user" checked> Update User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="update-group"> Update Group</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="update-branch"> Update Branch</label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="delete-user"> Delete User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="delete-group"> Delete Group</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="delete-branch"> Delete Branch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>User</td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="add-user"> Add User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="add-group" checked> Add Group</label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="update-user"> Update User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="update-group"> Update Group</label>
+                    </td>
+                    <td>
+                        <label><input type="checkbox" class="permission-checkbox" name="delete-user"> Delete User</label>
+                        <label><input type="checkbox" class="permission-checkbox" name="delete-group"> Delete Group</label>
+                    </td>
+                </tr>
+                <!-- Add more groups dynamically or manually -->
+            </tbody>
+        </table>
+
+        <!-- Add New Group Form -->
+        <div class="group-form">
+            <h2>Add New Group</h2>
+            <form method="post">
+                <label for="group-name">Group Name:</label>
+                <input type="text" id="group-name" name="group-name" required><br><br>
+
+                <table class="permissions-table">
+                    <tr>
+                        <th>Permissions</th>
+                        <th>Add</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>User</td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="add-user"> Add User</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="update-user"> Update User</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="delete-user"> Delete User</label></td>
+                    </tr>
+                    <tr>
+                        <td>Group</td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="add-group"> Add Group</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="update-group"> Update Group</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="delete-group"> Delete Group</label></td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="add-Branch"> Add Branch</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="update-Branch"> Update Branch</label></td>
+                        <td><label><input type="checkbox" class="permission-checkbox" name="delete-Branch"> Delete Branch</label></td>
+                    </tr>
+                </table>
+
+                <br><br>
+                <input type="submit" class="btn" value="Add Group">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
